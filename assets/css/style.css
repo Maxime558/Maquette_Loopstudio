@@ -1,0 +1,293 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alata", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* Overlay  */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  z-index: 2;
+}
+/* <-- Navbar --> */
+
+nav div {
+  display: flex;
+}
+#logo {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 32px;
+}
+#imglogo {
+  z-index: 3;
+}
+#imgburger {
+  z-index: 3;
+}
+label[for="burger"] {
+  order: 3;
+}
+nav {
+  min-width: 100%;
+  position: absolute;
+  max-width: 1920px;
+  height: 2.5rem;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 3vh;
+}
+
+nav label img {
+  width: 2.7rem;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+#burger {
+  display: none;
+}
+
+nav label {
+  margin: 0 20px;
+}
+.burger-icon::before {
+  content: "";
+  display: block;
+  background-image: url("./assets/images/icon-hamburger.svg");
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+#imgburger {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#burger:checked ~ #navbar {
+  transition: all 0.7s;
+  max-height: 600px;
+}
+#burger:checked ~ #overlay {
+  display: block;
+}
+
+#navbar {
+  position: absolute;
+  top: 4.5rem;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  margin: 0;
+  padding: 0rem;
+  max-height: 0px;
+  overflow: hidden;
+}
+
+#navbar li {
+  margin: 0;
+  padding: 0.3rem 0 0.3rem 1rem;
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.navMenu {
+  margin: 0 auto;
+  width: 90vw;
+  outline: 0.01rem white solid;
+  outline-offset: -1px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+ul {
+  padding-inline-start: 0;
+}
+.navMenu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navMenu li {
+  list-style: none;
+  margin: 0;
+  padding: 0.8rem 0;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.navMenu li:hover {
+  cursor: pointer;
+  background-color: var(--couleurHot);
+}
+
+nav:hover {
+  transition: all 0.7s;
+  background-color: rgba(0, 0, 0, 0);
+}
+#navbar li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#navbar a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  padding: 0.3rem 1.3rem;
+}
+
+#navbar li:hover {
+  background-color: rgba(0, 0, 0, 0.979);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/mobile/image-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  max-width: 1920px;
+  height: 70vh;
+  height: 70vh;
+}
+header h1 {
+  color: white;
+  font-weight: 100;
+  font-family: "Josefin Sans", sans-serif;
+  border: 2px solid white;
+  padding: 15px;
+  font-size: 2.5rem;
+}
+/* Section VR */
+
+#divVR {
+  height: 35vh;
+  width: 100%;
+  margin-top: 4rem;
+}
+#imagevr {
+  padding: 0 20px;
+  max-width: 100%;
+}
+.h2vr,
+.pvr {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+.h2vr {
+  font-family: "Josefin Sans", sans-serif;
+}
+.pvr {
+  color: gray;
+}
+
+/* Section creatiions */
+
+#creations {
+  padding: 2rem;
+}
+
+.image-item {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.image-item h3 {
+  margin-top: 0.5rem;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+}
+
+#creations {
+  height: 185vh;
+}
+
+#creations img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    overflow: hidden;
+}
+#creations h3{
+    position: absolute;
+    bottom: 0%;
+    font-size: 1.5rem;
+    padding: 0px 20px;
+}
+.image-item{
+    position: relative;
+}
+/* Footer */
+#seeall{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 15px;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 30px 0;
+}
+footer{
+    height: 48vh;
+    background-color: black;
+    margin: -5px 0;
+}
+#imglogo2{
+    position: absolute;
+    left: 20%;
+}
+#navbar2{
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: 6.5rem;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    max-height: 0px;
+    z-index: 2;
+    margin-top: 9rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+#navbar2 li {
+    margin: 0;
+    padding: 0.3rem 0 0.3rem 1rem;
+    list-style: none;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+#logo-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 3rem;
+    margin: 100px 0;
+  }
+#fin{
+    color: grey;
+    text-align: center;
+}
